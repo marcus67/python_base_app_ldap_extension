@@ -34,6 +34,7 @@ build_pypi:
   image: marcusrickert/docker-python-app:latest
   stage: build
   script:
+    - ${PIP3} install python_base_app
     - PYTHONPATH=contrib/python_base_app python3 ci_toolbox.py --execute-stage BUILD --use-dev-dir=.
   after_script:
     - PYTHONPATH=contrib/python_base_app python3 ci_toolbox.py --execute-stage TEARDOWN
@@ -49,6 +50,7 @@ install_pypi:
   image: marcusrickert/docker-python-app:latest
   stage: install_and_check
   script:
+    - ${PIP3} install python_base_app
     - PYTHONPATH=contrib/python_base_app python3 ci_toolbox.py --execute-stage INSTALL-PYPI-PACKAGE --use-dev-dir=.
     - PYTHONPATH=contrib/python_base_app python3 ci_toolbox.py --execute-stage TEST --use-dev-dir .
   after_script:
@@ -66,6 +68,7 @@ analyze:
   image: marcusrickert/docker-python-app:latest
   stage: analyze
   script:
+    - ${PIP3} install python_base_app
     - PYTHONPATH=contrib/python_base_app python3 ci_toolbox.py --execute-stage ANALYZE --use-dev-dir=.
   after_script:
     - PYTHONPATH=contrib/python_base_app python3 ci_toolbox.py --execute-stage TEARDOWN
@@ -77,4 +80,5 @@ publish_pypi:
   image: marcusrickert/docker-python-app:latest
   stage: publish
   script:
+    - ${PIP3} install python_base_app
     - PYTHONPATH=contrib/python_base_app python3 ci_toolbox.py --execute-stage PUBLISH-PYPI-PACKAGE --use-dev-dir=.
