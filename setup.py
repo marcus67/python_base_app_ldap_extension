@@ -56,6 +56,7 @@ extended_setup_params = {
     "build_pypi_package": True,
 
     # for Testing extra CI PIP dependencies
+    "ci_pip_dependencies": [ "python_base_app" ],
     #"ci_pip_dependencies": { "some-package" },
     #"extra_pypi_indexes": { "master": ["TEST_PYPI_EXTRA_INDEX"] },
 
