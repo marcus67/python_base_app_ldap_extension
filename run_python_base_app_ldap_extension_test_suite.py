@@ -1,9 +1,9 @@
-#! /var/lib/python_base_app/virtualenv/bin/python3
+#! /var/lib/python_base_app_ldap_extension/virtualenv/bin/python3
 # -*- coding: utf-8 -*-
 
-#    Copyright (C) 2019  Marcus Rickert
+#    Copyright (C) 2022  Marcus Rickert
 #
-#    See https://github.com/marcus67/little_brother
+#    See https://github.com/marcus67/python_base_app_ldap_extension
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 #    with this program; if not, write to the Free Software Foundation, Inc.,
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-from python_base_app.test import test_suite
+from python_base_app_ldap_extension.test import test_suite
 
 if __name__ == '__main__':
     exit(test_suite.main())

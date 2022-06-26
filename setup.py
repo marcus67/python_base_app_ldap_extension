@@ -35,17 +35,17 @@ with open(path.join(this_directory, 'requirements.txt')) as f:
 setup_params = {
     # standard setup configuration
 
-    "install_requires" : install_requires,
+    "install_requires": install_requires,
 
     "scripts": [
         "run_python_base_app_ldap_extension_test_suite.py",
     ],
 
-    "packages" : [ 'python_base_app_ldap_extension', 'python_base_app_ldap_extension.test' ],
+    "packages": ['python_base_app_ldap_extension', 'python_base_app_ldap_extension.test'],
     "include_package_data": True,
-    
-    "long_description" : long_description,
-    "long_description_content_type" : 'text/markdown',
+
+    "long_description": long_description,
+    "long_description_content_type": 'text/markdown',
 }
 
 extended_setup_params = {
@@ -54,14 +54,14 @@ extended_setup_params = {
     "id": "python-base-app-ldap-extension",
     "build_debian_package": False,
     "build_pypi_package": True,
+    "owasp": True,
 
     # for Testing extra CI PIP dependencies
-    "ci_pip_dependencies": [ "python_base_app" ],
-    #"ci_pip_dependencies": { "some-package" },
-    #"extra_pypi_indexes": { "master": ["TEST_PYPI_EXTRA_INDEX"] },
+    "ci_pip_dependencies": ["python_base_app"],
+    # "extra_pypi_indexes": { "master": ["TEST_PYPI_EXTRA_INDEX"] },
 
-    "publish_pypi_package": { 'release': ( 'PYPI_API_URL', 'PYPI_API_TOKEN', 'TEST_PYPI_API_USER' ),
-                              'main': ( 'TEST_PYPI_API_URL', 'TEST_PYPI_API_TOKEN', 'TEST_PYPI_API_USER' ) },
+    "publish_pypi_package": {'release': ('PYPI_API_URL', 'PYPI_API_TOKEN', 'TEST_PYPI_API_USER'),
+                             'main': ('TEST_PYPI_API_URL', 'TEST_PYPI_API_TOKEN', 'TEST_PYPI_API_USER')},
     "analyze": True
 }
 extended_setup_params.update(setup_params)
@@ -69,7 +69,6 @@ extended_setup_params.update(setup_params)
 setup_params.update(settings.settings)
 extended_setup_params.update(settings.extended_settings)
 extended_setup_params.update(setup_params)
-
 
 if __name__ == '__main__':
     setup(**setup_params)

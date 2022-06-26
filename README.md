@@ -1,11 +1,14 @@
-![PythonBaseAppLdapExtension-Logo](python_base_app/static/icons/icon-python-base-app-ldap-extension-128x128.png)
+![PythonBaseAppLdapExtension-Logo](python_base_app_ldap_extension/static/icons/icon-python-base-app-ldap-extension-128x128.png)
 
-# Python Application Framework `python_base_app_ldap_extension`
+# Python Application Framework Extension `python_base_app_ldap_extension`
 
 ## Overview
 
 `python_base_app_ldap_extension` is an extension to `python_base_app` to provide LDAP login functionality. 
 It is used by [LittleBrother](https://github.com/marcus67/little_brother).
+
+The LDAP functionality used to be included in `python_base_app` but was later extracted since the dependencies of
+this module contain PIP packages which need to be compiled.
 
 ## Change History 
 
@@ -35,10 +38,6 @@ See [here](https://github.com/marcus67/python_base_app_ldap_extension/blob/main/
 | Codacy Code Quality | <a href="https://www.codacy.com/app/marcus67/python_base_app_ldap_extension?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcus67/python_base_app_ldap_extension&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/3e3130c1c450404db9b16e10ab8af7fd"/></a>                                                                                  | not available                                                                                                                                                                             |
 
 Note: The vulnerability status is derived from the Python PIP packages found in `requirements.txt`.
-
-## Features
-
-* TODO
 
 ## Caveats
 

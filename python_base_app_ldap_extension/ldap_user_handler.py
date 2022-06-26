@@ -163,7 +163,6 @@ class LdapUserHandler(base_user_handler.BaseUserHandler):
                                                                   group_dn=p_group_dn,
                                                                   dn=search_base_dn))
 
-
         if len(result) == 0:
             msg = "cannot find LDAP group '{group_dn}' in sub tree '{dn}'"
             raise configuration.ConfigurationException(msg.format(group_dn=p_group_dn,
