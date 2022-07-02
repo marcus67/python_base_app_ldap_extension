@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2022  Marcus Rickert
+# Copyright (C) 2021  Marcus Rickert
 #
 # See https://github.com/marcus67/python_base_app_ldap_extension
 # This program is free software; you can redistribute it and/or modify
