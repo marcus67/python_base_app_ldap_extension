@@ -17,7 +17,7 @@
 
 settings = {
     "name": "python-base-app-ldap-extension",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Support for LDAP authentication in python_base_app.",
     "author": "Marcus Rickert",
     "author_email": "marcus.rickert@web.de",
