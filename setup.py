@@ -61,7 +61,7 @@ extended_setup_params = {
     # "extra_pypi_indexes": { "master": ["TEST_PYPI_EXTRA_INDEX"] },
 
     "publish_pypi_package": {'release': ('PYPI_API_URL', 'PYPI_API_TOKEN', 'TEST_PYPI_API_USER'),
-                             'main': ('TEST_PYPI_API_URL', 'TEST_PYPI_API_TOKEN', 'TEST_PYPI_API_USER')},
+                             'master': ('TEST_PYPI_API_URL', 'TEST_PYPI_API_TOKEN', 'TEST_PYPI_API_USER')},
     "analyze": True
 }
 extended_setup_params.update(setup_params)
